@@ -1,11 +1,15 @@
-export const increaseCount = () => {
+import { counterTypes } from "../type"
+
+export const increaseCount = (count) => {
     return{
-        type: 'INCREASE_COUNT',
+        type: counterTypes.increaseCount,
+        payload: count
     }
 }
 
-export const decreaseCount = () => {
+export const decreaseCount = (count) => {
     return{
-        type: 'DECREASE_COUNT',
+        type: counterTypes.decreaseCount,
+        payload: count
     }
 }
